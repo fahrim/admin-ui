@@ -31,6 +31,10 @@ class AdminUIServiceProvider extends ServiceProvider
             ], 'views');
 
             $this->publishes([
+                __DIR__.'/../resources/views' => resource_path('views')
+            ], 'install-ui-package-views');
+
+            $this->publishes([
                 __DIR__ . '/../install-stubs/config/wysiwyg-media.php' => config_path('wysiwyg-media.php'),
             ], 'config');
 
